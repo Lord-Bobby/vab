@@ -1,13 +1,14 @@
-[gd_scene load_steps=10 format=4 uid="uid://qettrrmxuuco"]
+[gd_scene load_steps=11 format=4 uid="uid://qettrrmxuuco"]
 
 [ext_resource type="Script" uid="uid://c0swrpgndhi4l" path="res://player.gd" id="1_h2yge"]
-[ext_resource type="Texture2D" uid="uid://y1s2tsgr6lia" path="res://IMG_2964 (1).png" id="2_1bvp3"]
-[ext_resource type="Texture2D" uid="uid://4507b7fjy5bp" path="res://vab 2 (1).png" id="3_1bvp3"]
-[ext_resource type="Texture2D" uid="uid://svqhc1nqfny3" path="res://idle 21.png" id="3_lquwl"]
-[ext_resource type="Texture2D" uid="uid://b1hnd6shqmguj" path="res://Screenshot 2025-09-27 at 12.05.22.png" id="5_lquwl"]
+[ext_resource type="Texture2D" uid="uid://y1s2tsgr6lia" path="res://vab sprites/vab walk.png" id="2_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://4507b7fjy5bp" path="res://vab sprites/vab original.png" id="3_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://svqhc1nqfny3" path="res://vab sprites/vab idle.png" id="3_lquwl"]
+[ext_resource type="Texture2D" uid="uid://dujjrqpmqa4bc" path="res://vab sprites/vab blind.png" id="5_7mycd"]
+[ext_resource type="Texture2D" uid="uid://b1hnd6shqmguj" path="res://vab tiles/Screenshot 2025-09-27 at 12.05.22.png" id="5_lquwl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lquwl"]
-size = Vector2(35.35855, 779.8318)
+size = Vector2(35.35855, 794.8269)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lquwl"]
 animations = [{
@@ -178,8 +179,7 @@ scale = Vector2(0.45805004, 0.5436624)
 script = ExtResource("1_h2yge")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2(235.93185, 267.9825)
-rotation = -0.097808674
+position = Vector2(235.79376, 265.32803)
 scale = Vector2(10.181411, 0.35450962)
 shape = SubResource("RectangleShape2D_lquwl")
 
@@ -200,6 +200,13 @@ scale = Vector2(1.862607, 1.6942922)
 sprite_frames = SubResource("SpriteFrames_lquwl")
 animation = &"walk"
 frame_progress = 0.6032527
+
+[node name="VabBlind" type="Sprite2D" parent="Player"]
+position = Vector2(246.6946, 265.58682)
+rotation = -0.046702553
+scale = Vector2(0.38638416, 0.2938264)
+skew = -0.032701373
+texture = ExtResource("5_7mycd")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(0, 1)

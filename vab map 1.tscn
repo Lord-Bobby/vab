@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=4 uid="uid://cf0nm46w27vmg"]
+[gd_scene load_steps=11 format=4 uid="uid://b0g61phss2tjk"]
 
 [ext_resource type="Script" uid="uid://c0swrpgndhi4l" path="res://player.gd" id="1_4a3ea"]
-[ext_resource type="Texture2D" uid="uid://y1s2tsgr6lia" path="res://IMG_2964 (1).png" id="2_jope2"]
-[ext_resource type="Texture2D" uid="uid://svqhc1nqfny3" path="res://idle 21.png" id="3_cf06y"]
-[ext_resource type="Texture2D" uid="uid://4507b7fjy5bp" path="res://vab 2 (1).png" id="4_uxmp7"]
-[ext_resource type="Texture2D" uid="uid://b1hnd6shqmguj" path="res://Screenshot 2025-09-27 at 12.05.22.png" id="5_0wywv"]
+[ext_resource type="Texture2D" uid="uid://y1s2tsgr6lia" path="res://vab sprites/vab walk.png" id="2_jope2"]
+[ext_resource type="Texture2D" uid="uid://svqhc1nqfny3" path="res://vab sprites/vab idle.png" id="3_cf06y"]
+[ext_resource type="Texture2D" uid="uid://4507b7fjy5bp" path="res://vab sprites/vab original.png" id="4_uxmp7"]
+[ext_resource type="Texture2D" uid="uid://b1hnd6shqmguj" path="res://vab tiles/Screenshot 2025-09-27 at 12.05.22.png" id="5_0wywv"]
+[ext_resource type="Texture2D" uid="uid://dujjrqpmqa4bc" path="res://vab sprites/vab blind.png" id="5_jope2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lquwl"]
 size = Vector2(35.35855, 779.8318)
@@ -200,6 +201,13 @@ scale = Vector2(1.862607, 1.6942922)
 sprite_frames = SubResource("SpriteFrames_lquwl")
 animation = &"walk"
 frame_progress = 0.6032527
+
+[node name="VabBlind" type="Sprite2D" parent="Player"]
+position = Vector2(240.423, 269.59464)
+rotation = -0.051334325
+scale = Vector2(0.34817415, 0.30257854)
+skew = -0.020920396
+texture = ExtResource("5_jope2")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(0, 1)
